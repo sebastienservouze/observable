@@ -1,0 +1,21 @@
+
+button {
+    transition: background-color .5s, color .5s;
+
+    &:not(.active) {
+        background-color: #555;
+        color: #AAA;;
+    }
+}
+
+.reset {
+    background-color: #AAA;
+
+    &:not(.active) {
+        background-color: #888;
+    }
+}
+
+.console:not(.active) {
+    color: #AAA;
+}

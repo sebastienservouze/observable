@@ -1,0 +1,8 @@
+<button [class.active]="active" [disabled]="!active" (click)="try.emit(section)">Essayer !</button>
+<button [class.active]="active" [disabled]="!active" class="reset" *ngIf="section?.console?.length" (click)="reset.emit(section)">Reset</button>
+
+<div *ngIf="section?.console?.length" class="console" [class.active]="active">
+  <p *ngFor="let line of section?.console">
+    <span class="sol">></span> {{ line }}<br>
+  </p>
+</div>
