@@ -37,7 +37,7 @@ const BEHAVIOR: Section = {
 const SUBSCRIBE: Section = {
     title: 'SUBSCRIBE',
     codeBlocs: {
-        essayer: "essayer(): void {\n  userCount$.subscribe((userCount: number) => console.log(userCount + ' utilisateurs');\n\n  users.push(new User());\n  userCount$.next(users.length);\n};"
+        essayer: "essayer(): void {\n  userCount$.subscribe((userCount: number) => console.log(userCount + ' utilisateurs');\n\n  users.push(new User());\n\n  console.log('Emission de ' + user.length + ' utilisateurs.');\n  userCount$.next(users.length);\n};"
     },
     console: [],
     users: [],
@@ -49,7 +49,7 @@ const PIPE: Section = {
     title: 'PIPE',
     codeBlocs: {
         exemple: "userCount$.pipe(delay(1000)).subscribe((userCount: number) => {\n  console.log(userCount + ' utilisateurs');\n});",
-        essayer: "essayer(): void {\n  users.add(new User());\n\n  console.log('Emission de ' + user.length + ' utilisateurs.');\n  userCount$.next(users.length);\n}"
+        essayer: "essayer(): void {\n  users.push(new User());\n\n  console.log('Emission de ' + user.length + ' utilisateurs.');\n  userCount$.next(users.length);\n}"
     },
     console: [],
     users: [],
@@ -61,7 +61,7 @@ const TAKE: Section = {
     title: 'TAKE',
     codeBlocs: {
         exemple: "userCount$.pipe(take(1)).subscribe((userCount: number) => {\n  console.log(userCount + ' utilisateurs');\n});",
-        essayer: "essayer(): void {\n  users.add(new User());\n\n  console.log('Emission de ' + user.length + ' utilisateurs.');\n  userCount$.next(users.length);\n}"
+        essayer: "essayer(): void {\n  users.push(new User());\n\n  console.log('Emission de ' + user.length + ' utilisateurs.');\n  userCount$.next(users.length);\n}"
     },
     console: [],
     users: [],
